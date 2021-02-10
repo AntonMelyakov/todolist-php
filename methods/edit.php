@@ -3,7 +3,7 @@ include("reusable_methods.php");
 session_start();
 
 if(session_expired()){
-    header("Location: /to-do-list");
+    header("Location: /todophp/todolist-php");
     die();
  }
 
@@ -15,7 +15,7 @@ $deadline = $_POST['deadline'] ?? '';
 $result_query_scs = make_edit_task($task_id, $task_desc, $task_done, $deadline);
 
 if($result_query_scs){
-        header("Location: /to-do-list/list.php");
+        header("Location: /todophp/todolist-php/list.php");
         die();
 }
 

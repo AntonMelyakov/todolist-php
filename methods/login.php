@@ -5,7 +5,7 @@ $username = $_POST['login_username'];
 $password = $_POST['login_password'];
 
 if(!$username || !$password ){
-    header("Location: /to-do-list");
+    header("Location: /todophp/todolist-php");
     die();
 }
 
@@ -15,7 +15,7 @@ if($user){
     session_start();
     $_SESSION["user"] = $user;
     $_SESSION["started"] = time();
-    header("Location: /to-do-list/list.php");
+    header("Location: /todophp/todolist-php/list.php");
 };
 
 ?>

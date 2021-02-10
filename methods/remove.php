@@ -3,7 +3,7 @@ include("reusable_methods.php");
 session_start();
 
 if(session_expired()){
-    header("Location: /to-do-list");
+    header("Location: /todophp/todolist-php");
     die();
  }
 
@@ -17,7 +17,7 @@ $current_user_id = $_SESSION['user']['id'];
 if (!empty($current_task) && !empty($current_user_id)) { 
     if ($current_task['username_id'] == $current_user_id) { //check if the user owns this task
         delete_task($task_id);
-        header("Location: /to-do-list/list.php");
+        header("Location: /todophp/todolist-php/list.php");
     }
 }
 

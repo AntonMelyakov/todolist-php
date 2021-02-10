@@ -3,7 +3,7 @@ include("methods/reusable_methods.php");
 session_start();
 
 if (session_expired()) {
-    header("Location: /to-do-list");
+    header("Location: /todophp/todolist-php/");
     die();
 }
 

@@ -7,7 +7,7 @@ $pass = $_POST['reg_password'];
 
 //check if values are empty
 if(empty($username) || empty($mail) || empty($pass)) {
-    header("Location: /to-do-list");
+    header("Location: /todophp/todolist-php");
     die();
 }
 
@@ -17,7 +17,7 @@ $username_used = fetch_from_db('username', 'users', $username);
 
 //if username or email are already used, redirect to index
 if(!empty($email_used) || !empty($username_used) ){
-    header("Location: /to-do-list");
+    header("Location: /todophp/todolist-php");
     die();
 }else{ //else insert into DB
     create_new_user($username, $mail, $pass);

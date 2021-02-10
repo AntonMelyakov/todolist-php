@@ -72,11 +72,9 @@ function make_edit_task($task_id = null, $task_desc, $task_done, $deadline)
     if ($conn) {
         if ($task_id) { //update
             $sql = "UPDATE tasks SET task='$task_desc', task_done='$task_done', deadline='$deadline' WHERE id='$task_id'";
-            $result = $conn->query($sql);
         } else { //create
             $userid = $_SESSION['user']['id'];
             $sql = "INSERT INTO tasks (`id`, `username_id`, `task`, `task_done`, `deadline`) VALUES (NULL, '$userid', '$task_desc', '$task_done', '$deadline');";
-            $result = $conn->query($sql);
         }
 
         $result_return = false;
