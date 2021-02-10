@@ -83,7 +83,6 @@ function make_edit_task($task_id = null, $task_desc, $task_done, $deadline)
         if ($conn->multi_query($sql) === TRUE) {
             $result_return = true; //no errors
         }
-
         $conn->close();
         return $result_return;
     }
@@ -93,7 +92,6 @@ function make_edit_task($task_id = null, $task_desc, $task_done, $deadline)
 function delete_task($task_id)
 {
     $conn = make_connection();
-
     if ($conn) {
         $sql = "DELETE FROM tasks WHERE id='$task_id'";
         if ($conn->query($sql) === TRUE) {
@@ -101,7 +99,6 @@ function delete_task($task_id)
         } else {
             echo "Error deleting record: " . $conn->error;
         }
-
         $conn->close();
     }
 }
@@ -118,7 +115,6 @@ function create_new_user($username, $email, $pass)
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
-
         $conn->close();
     }
 }

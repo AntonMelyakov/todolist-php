@@ -1,9 +1,6 @@
 <?php
 include("reusable_methods.php");
 
-print_r($_POST);
-echo "asdasd";
-
 $username = $_POST['reg_username'];
 $mail = $_POST['reg_mail'];
 $pass = $_POST['reg_password'];

@@ -6,7 +6,6 @@ include('header.php');
     <div class="container">
         <div class="starter-template">
             <h1 class="text-center">Registration</h1>
-
             <form action="methods/registration.php" method="post" class="mx-auto">
                 <div class="form-group">
                     <label for="reg_username">Username:</label>
@@ -23,12 +22,9 @@ include('header.php');
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-primary">SUBMIT</button>
                 </div>
-
             </form>
-
         </div>
     </div>
-
 </body>
 
 <?php

@@ -7,7 +7,6 @@ if (session_expired()) {
     die();
 }
 
-
 if (isset($_GET["id"])) {
     $task_id = $_GET["id"];
 }

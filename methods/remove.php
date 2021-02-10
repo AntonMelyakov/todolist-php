@@ -9,7 +9,6 @@ if(session_expired()){
 
 $task_id = $_POST['task_id'];
 
-
 $current_task =  fetch_from_db('id', 'tasks', $task_id);
 $current_task = $current_task[0];
 

@@ -24,7 +24,6 @@ include('header.php');
 <body class="index">
     <div class="container">
         <div class="starter-template">
-
             <h1 class="text-center">EDIT TASK</h1>
             <form action="methods/edit.php" method="post" class="mx-auto">
                 <div class="form-group">
@@ -35,7 +34,6 @@ include('header.php');
                     <label class="form-check-label" for="taskdone">Task is done</label> </br>
                     <input class="form-check-input" type="radio" id="tasknotdone" name="istaskdone" value="0">
                     <label class="form-check-label" for="female">Task is not done</label>
-
                 </div>
                 <div class="form-group">
                     <label for="deadline">Deadline</label>
@@ -44,9 +42,7 @@ include('header.php');
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-primary">SUBMIT</button>
-                </div>
-                
-
+                </div>               
             </form>
         </div>
     </div>
