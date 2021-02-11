@@ -19,7 +19,7 @@ function make_connection()
 
 function fetch_from_db($column, $db_table, $searched_value)
 {
-    $conn = make_connection();
+    $conn = Connection::getConnection();
 
     if ($conn) {
         $sql = "SELECT * FROM $db_table WHERE $column = '$searched_value'";
@@ -40,7 +40,7 @@ function fetch_from_db($column, $db_table, $searched_value)
 
 function check_user_and_pass($username,  $password)
 {
-    $conn = make_connection();
+    $conn = Connection::getConnection();
 
     if ($conn) {
         $sql = "SELECT * FROM users WHERE username = '$username' AND pass = '$password'";
@@ -68,7 +68,7 @@ function session_expired()
 //make and update task
 function make_edit_task($task_id = null, $task_desc, $task_done, $deadline)
 {
-    $conn = make_connection();
+    $conn = Connection::getConnection();
     if ($conn) {
         if ($task_id) { //update
             $sql = "UPDATE tasks SET task='$task_desc', task_done='$task_done', deadline='$deadline' WHERE id='$task_id'";
@@ -89,7 +89,7 @@ function make_edit_task($task_id = null, $task_desc, $task_done, $deadline)
 //delete task 
 function delete_task($task_id)
 {
-    $conn = make_connection();
+    $conn =  Connection::getConnection();
     if ($conn) {
         $sql = "DELETE FROM tasks WHERE id='$task_id'";
         if ($conn->query($sql) === TRUE) {

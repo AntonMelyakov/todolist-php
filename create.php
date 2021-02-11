@@ -1,4 +1,5 @@
 <?php
+include_once('classes/connection.php');
 include("methods/reusable_methods.php");
 session_start();
 
