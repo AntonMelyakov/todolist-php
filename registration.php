@@ -12,7 +12,7 @@ include('header.php');
                     <input class="form-control" type="text" name="reg_username" id="reg_username">
                 </div>
                 <div class="form-group mt-3">
-                    <label for="reg_mail">email:</label>
+                    <label for="reg_mail">Email:</label>
                     <input class="form-control" type="mail" name="reg_mail" id="reg_mail">
                 </div>
                 <div class="form-group mt-3">

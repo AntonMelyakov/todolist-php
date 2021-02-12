@@ -16,6 +16,16 @@ if(empty($username) || empty($mail) || empty($pass)) {
     die();
 }
 
+if(!isvalidemail($mail)){
+    session_start();
+     $_SESSION['msg'] = '<div class="alert alert-danger text-center" role="alert">
+                            This is not a real email :(
+                        </div>'; 
+    header("Location: ../index.php");
+    header("Location: /todophp/todolist-php");
+    die();
+}
+
 //hash
 $pass = password_hash($pass, PASSWORD_DEFAULT);
 
