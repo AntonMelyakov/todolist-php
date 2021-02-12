@@ -9,7 +9,7 @@ Requirements:<br>
    password = "";<br>
    dbname = "todo_list";<br>
  - you could change them in: <br>
-  'todophp/todolist-php/tables/user_table.php'
+  'todophp/todolist-php/tables/user_table.php'<br>
   'todophp/todolist-php/classes/connection.php'
 
 
