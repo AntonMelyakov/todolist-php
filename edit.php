@@ -37,8 +37,9 @@ include('header.php');
                     <input class="form-control" type="date" id="deadline" name="deadline" value='<?=date_format(date_create($task->deadline),"Y-m-d") ?>'>
                     <input class="form-control" type="hidden" id="taskId" name="taskId" value=' <?= $task->id ?> '>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                <div class="d-flex justify-content-center flex-column">
+                    <button type="submit" class="btn btn-primary">SUBMIT</button> 
+                    <a type="submit" href="list.php" class="btn btn-primary mt-2">Back</a>
                 </div>               
             </form>
         </div>

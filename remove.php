@@ -20,6 +20,7 @@ include('header.php');
                 <input class="form-control" type="hidden" id="task_id" name="task_id" value='<?= $_GET["id"] ?>'>
             </div>
             <div class="d-flex justify-content-center">
+                <a class="btn btn-primary mr-2" href="list.php">No</a>
                 <button class="btn btn-primary" type="submit">Yes</button>
                 <div>
         </form>
