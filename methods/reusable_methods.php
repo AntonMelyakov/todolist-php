@@ -7,7 +7,7 @@ function make_connection()
     $password = "";
     $dbname = "todo_list";
 
-    // Create connection
+    // Create connection ( now part of connection class)
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
     if ($conn->connect_error) {
@@ -37,7 +37,7 @@ function fetch_from_db($column, $db_table, $searched_value)
     }
 }
 
-
+// ( now part of user class)
 function check_user_and_pass($username,  $password)
 {
     $conn = Connection::getConnection();
@@ -55,6 +55,7 @@ function check_user_and_pass($username,  $password)
     }
 }
 
+//if session is expired
 function session_expired()
 {
     if ((time() - $_SESSION['started']) > (60 * 30)) {
@@ -65,7 +66,7 @@ function session_expired()
 
 //CRUD
 
-//make and update task
+//make and update task ( now part of task class)
 function make_edit_task($task_id = null, $task_desc, $task_done, $deadline)
 {
     $conn = Connection::getConnection();
@@ -86,7 +87,7 @@ function make_edit_task($task_id = null, $task_desc, $task_done, $deadline)
     }
 }
 
-//delete task 
+//delete task  ( now part of task class)
 function delete_task($task_id)
 {
     $conn =  Connection::getConnection();
@@ -101,7 +102,7 @@ function delete_task($task_id)
     }
 }
 
-//create new user
+//create new user  ( now part of user class)
 function create_new_user($username, $email, $pass)
 {
     $conn = make_connection();

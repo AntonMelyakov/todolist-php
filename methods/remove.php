@@ -17,10 +17,14 @@ if (!empty($task) && !empty($current_user_id)) {
         $deleted = $task->delete();
 
         if ($deleted) {
-            $_SESSION['msg'] = "Removed!";
+            $_SESSION['msg'] = '<div class="alert alert-success text-center" role="alert">
+                                Removed!
+                                </div>';;
         } else {
-            $_SESSION['msg'] = "Something went wrong :(";
+            $_SESSION['msg'] = '<div class="alert alert-danger text-center" role="alert">
+                                     Something went wrong :(
+                                </div>'; ;
         }
-        header("Location: /todophp/todolist-php/list.php");
+        header("Location: ../list.php");
     }
 }

@@ -22,7 +22,7 @@ $saved = $task->save();
 
 if($saved){
         $_SESSION['msg'] = '<div class="alert alert-success text-center" role="alert">
-                                Edit done!
+                                Done!
                             </div>';
 }else{
         $_SESSION['msg'] = '<div class="alert alert-danger text-center" role="alert">
@@ -30,4 +30,4 @@ if($saved){
                             </div>';    
 }
 
-header("Location: /todophp/todolist-php/list.php");
+header("Location: ../list.php");

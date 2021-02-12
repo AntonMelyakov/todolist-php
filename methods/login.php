@@ -17,10 +17,10 @@ $signin = User::check_user_and_pass($username,  $password);
 if(!$signin){
     session_start();
      $_SESSION['msg'] = '<div class="alert alert-danger text-center" role="alert">
-                                Password or username is incorrect :(
-                            </div>'; 
-    header("Location: /todophp/todolist-php/index.php");
+                            The user name or password is incorrect :(
+                        </div>'; 
+    header("Location: ../index.php");
 }else{
-    header("Location: /todophp/todolist-php/list.php");
+    header("Location: ../list.php");
 }
 
