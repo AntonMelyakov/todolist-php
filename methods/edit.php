@@ -11,11 +11,14 @@ if (session_expired()) {
 
 if (isset($_POST['taskId'])) {
         $task = Task::select_task($_POST['taskId']);
-        $task->task = $_POST['task_desc'] ?? '';
-        $task->task_done = $_POST['istaskdone'] ?? '';
-        $task->deadline = $_POST['deadline'] ?? '';
+        $task->task = $_POST['task_desc'] ? $_POST['task_desc']  :'task description ...';
+        $task->task_done = $_POST['istaskdone'] ? $_POST['istaskdone']  :'';
+        $task->deadline = $_POST['deadline'] ? $_POST['deadline']  :'';
 }else{
-        $task = new Task(null, $_POST['task_desc'], $_SESSION['user']['id'], $_POST['istaskdone'], $_POST['deadline']);
+        
+        
+        $task_description = $_POST['task_desc'] ? $_POST['task_desc']  :'task description ...';
+        $task = new Task(null, $task_description, $_SESSION['user']['id'], $_POST['istaskdone'], $_POST['deadline']);
 }
 
 $saved = $task->save();

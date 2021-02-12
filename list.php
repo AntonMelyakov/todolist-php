@@ -29,11 +29,10 @@ if(isset($_SESSION['msg']) && $_SESSION['msg'] != ''){
             <a href="create.php" class="btn btn-primary m-2">Create new task</a>
         </div>
         <table class="table table-bordered">
-            <thead class="thead-dark">
+            <thead class="">
                 <th scope="col">TASK</th>
                 <th scope="col">DONE</th>
                 <th scope="col">DEADLINE</th>
-                <th scope="col"></th>
                 <th scope="col"></th>
             </thead>
             <tbody>
@@ -51,8 +50,8 @@ if(isset($_SESSION['msg']) && $_SESSION['msg'] != ''){
       <th scope='row'>" . $task->task . "</th>
       <th scope='row' class='text-center'>" . $task_done  . " </th>
       <th scope='row'>" . $task_deadline . "</th> 
-      <th scope='row' class='text-center'> <a class='btn btn-primary' href='edit.php?id=" . $task->id . "'>edit</a></th>  
-      <th scope='row' class='text-center'> <a class='btn btn-primary' href='remove.php?id=" . $task->id . "'>remove</a></th>      
+      <th scope='row' class='text-center'> <a class='btn btn-primary' href='edit.php?id=" . $task->id . "'>Edit</a>  
+      <a class='btn btn-primary btn-danger' href='remove.php?id=" . $task->id . "'>Remove</a></th>      
      </tr>");
                 } ?>
             </tbody>

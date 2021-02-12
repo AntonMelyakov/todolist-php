@@ -41,6 +41,7 @@ $sql = "CREATE TABLE tasks (
       echo "Error creating table: " . $conn->error;
     }
 
+    //test task for the firs user
 $sql = "INSERT INTO tasks (username_id, task)
 VALUES ('1', 'test_task')";
 
